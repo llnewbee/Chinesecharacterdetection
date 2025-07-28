@@ -12,6 +12,7 @@ from fastdtw import fastdtw
 from scipy.spatial.distance import euclidean
 from scipy.spatial import procrustes
 
+
             #                      _oo8oo_
             #                     o8888888o
             #                     88" . "88
@@ -35,8 +36,8 @@ from scipy.spatial import procrustes
             #              佛祖保佑         永无bug
 
 def cut(IMG_PATH,SAVE_DIR,N_ROWS,N_COLS,OUT_SIZE=(400, 400),PADDING_RATIO=0.03, PADDING_PX_MIN=6,): # cut_plus.py 的函数
-    # IMG_PATH = '/Users/ymhave/Downloads/wo.jpg' 原始字帖地址
-    # SAVE_DIR = '/Users/ymhave/Downloads/Work/' 保存地址
+    # IMG_PATH = '～/wo.jpg' 原始字帖地址
+    # SAVE_DIR = '～/Work/' 保存地址
     # N_ROWS, N_COLS = 11, 8 增加精确度：行/列
     # OUT_SIZE = (400, 400) 需求图片大小
     # PADDING_RATIO, PADDING_PX_MIN = 0.03, 6  填充比例, 最小填充像素
@@ -173,8 +174,8 @@ def cut(IMG_PATH,SAVE_DIR,N_ROWS,N_COLS,OUT_SIZE=(400, 400),PADDING_RATIO=0.03, 
 #输入参数，会在对应目录生成对应张图片喵
 
 def core(user_folder,expert_folder,save_dir):
-    # user_folder = '/Users/ymhave/Downloads/Work' 用户文件夹地址
-    # expert_folder = '/Users/ymhave/Downloads/Expert' 专家文件夹地址
+    # user_folder = '～/Work' 用户文件夹地址
+    # expert_folder = '～/Expert' 专家文件夹地址
     # save_dir 保存目录
 
     user_files = [f for f in os.listdir(user_folder) if f.endswith('.png') or f.endswith('.jpg')]
@@ -249,7 +250,7 @@ def core(user_folder,expert_folder,save_dir):
 #输入参数会生成coreall.json其中对应键'average_centroid_distance'为平均重心距离
 
 def cner(folder_path,save_dir,size=400):
-    # folder_path = '/Users/ymhave/Downloads/Expert'
+    # folder_path = '～/Expert'
     # save_dir 保存目录
     folder_name = os.path.basename(folder_path.rstrip("/\\"))
     # size=400
@@ -595,8 +596,8 @@ def code(core_json_path,corncer_json_path):
 #输入参数会生成最终评分
 
 def file(folder_path,file_dir,file_name):
-    # folder_path = "/Users/ymhave/Downloads/file" 读取图片的文件夹路径
-    # file_dir = "/Users/ymhave/Downloads/1" 文件储存地址
+    # folder_path = "～/file" 读取图片的文件夹路径
+    # file_dir = "～/1" 文件储存地址
     # file_name = 'test' 输出的json文件名
 
     # 支持的图片扩展名（小写）
@@ -627,9 +628,9 @@ def read(json_path: str) -> dict:
         _score = json.load(f)
     return _score
 # ------------数据输入处----------
-or_work_path = '~/test/work' #原始待评价作品目录
-or_expert_path = '~/test/expert' #原始专家作品目录
-path = '~/test/down' #工作目录(保存文件)
+or_work_path = '～/test/work' #原始待评价作品目录
+or_expert_path = '～/test/expert' #原始专家作品目录
+path = '～/test/down' #工作目录(保存文件)
 N_ROWS = 11   #规定字帖行数
 N_COLS = 8   #规定字帖列数
 #------------施工区请勿打扰喵----------
@@ -718,13 +719,13 @@ def plot(data):
     box = ax.boxplot(df["score"], vert=True, patch_artist=True, showmeans=True)
 
     # 添加标注线
-    ax.axhline(median, color='orange', linestyle='--', label=f'中位数: {median:.2f}')
-    ax.axhline(mean, color='blue', linestyle='--', label=f'平均值: {mean:.2f}')
-    ax.axhline(top_threshold, color='green', linestyle='--', label=f'前30%阈值: {top_threshold:.2f}')
+    ax.axhline(median, color='orange', linestyle='--', label=f'Median: {median:.2f}')
+    ax.axhline(mean, color='blue', linestyle='--', label=f'Average: {mean:.2f}')
+    ax.axhline(top_threshold, color='green', linestyle='--', label=f'Threshold of the top 30%: {top_threshold:.2f}')
 
     # 添加标题和图例
-    ax.set_title("分值箱形图（含平均值、中位数、前30%）")
-    ax.set_ylabel("分数")
+    ax.set_title("Box plot with score values (including mean, median, and top 30%)")
+    ax.set_ylabel("score")
     ax.legend(loc='upper right')
 
     # 保存图像到指定目录
