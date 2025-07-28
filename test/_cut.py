@@ -2,6 +2,7 @@ import cv2
 import numpy as np
 import os
 
+#旧版的作品裁剪程序
 # 1. 在这里自定义你的参数 ↓↓↓
 img_path = '/Users/ymhave/Downloads/le.jpg'  # 你的字帖图片路径
 out_dir = '/Users/ymhave/Downloads/02'       # 分割后图片存放的文件夹
