@@ -1,6 +1,7 @@
 import os
 import json
 
+# 识别文件夹内的所有图片并保存为带有路径的字典模块
 folder_path = "/Users/ymhave/Downloads/file"
 
 # 支持的图片扩展名（小写）
