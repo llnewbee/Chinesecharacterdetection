@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 import os
 import math
-
+#已经舍弃的文件
 # 个人作品文件夹
 user_folder = '/Users/ymhave/Downloads/Work'
 # 专家作品文件夹
