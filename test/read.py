@@ -1,5 +1,5 @@
 import json
-
+# 读取json字典模块
 def read(json_path: str) -> dict:
     with open(json_path, 'r', encoding='utf-8') as f:
         data = json.load(f)
