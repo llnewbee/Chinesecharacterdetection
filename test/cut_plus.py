@@ -2,6 +2,7 @@ import os
 import cv2
 import numpy as np
 from PIL import Image
+#新版 作品图像透视变化和裁剪模块
 
 # ===================== 配置 =====================
 IMG_PATH = '/Users/ymhave/Downloads/file/zi.jpg'
