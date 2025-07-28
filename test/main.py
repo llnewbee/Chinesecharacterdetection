@@ -1,5 +1,6 @@
 import json
 
+#最终分数计算模块
 # 假设 json 文件路径
 core_json_path = '/Users/ymhave/Documents/归档/数学建模/Expert_Work.json'
 corncer_json_path = "/Users/ymhave/Documents/归档/数学建模/metrics.json"
