@@ -4,6 +4,7 @@ import os
 import math
 import json
 
+# 批量识别出汉字的重心并计算出平均差异值的模块
 user_folder = '/Users/ymhave/Downloads/Work'
 expert_folder = '/Users/ymhave/Downloads/Expert'
 
