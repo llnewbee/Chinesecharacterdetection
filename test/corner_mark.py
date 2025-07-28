@@ -2,6 +2,7 @@ import os
 import cv2
 import json
 
+#批量识别角点的模块
 size=400
 def get_image_files(folder):
     exts = ('.jpg', '.jpeg', '.png', '.bmp', '.tiff')
