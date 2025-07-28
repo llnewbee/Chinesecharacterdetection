@@ -9,6 +9,8 @@ from fastdtw import fastdtw
 from scipy.spatial.distance import euclidean
 from scipy.spatial import procrustes
 
+#Procrustes距离计算模块
+
 # ===================== 配置区 =====================
 FASTDTW_RADIUS = 3           # fastdtw 搜索半径（2~3 更稳但更慢）
 DRAW_DEBUG = False            # 是否导出调试图（两条对齐曲线叠画）
