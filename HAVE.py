@@ -12,7 +12,6 @@ from fastdtw import fastdtw
 from scipy.spatial.distance import euclidean
 from scipy.spatial import procrustes
 
-
             #                      _oo8oo_
             #                     o8888888o
             #                     88" . "88
